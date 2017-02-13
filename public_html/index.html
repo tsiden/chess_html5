@@ -9,8 +9,19 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/chess.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>TODO write content1</div>
+        <canvas height='620' width='680' id='example'>Обновите браузер</canvas>
+		<script>
+			var example = document.getElementById("example");
+			ctx     = example.getContext('2d');
+                        pawn5 = new Image();  // Создание нового объекта изображения
+                        pawn5.src = 'img/pawn.png';  // Путь к изображению которое необходимо нанести на холст
+                        pawn5.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+                          ctx.drawImage(pawn5, 0, 0, 40, 40);  // Рисуем изображение от точки с координатами 0, 0
+                        }
+                </script>    
     </body>
-</html>
+</html> 
